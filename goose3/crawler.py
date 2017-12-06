@@ -209,7 +209,8 @@ class Crawler(object):
     def get_image(self):
         doc = self.article.raw_doc
         top_node = self.article.top_node
-        self.article.top_image = self.image_extractor.get_best_image(doc, top_node)
+        #self.article.top_image = self.image_extractor.get_best_image(doc, top_node)
+        self.article.top_image = ''
 
     def get_html(self, crawl_candidate, parsing_candidate):
         # we got a raw_tml
