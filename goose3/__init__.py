@@ -61,16 +61,16 @@ class Goose(object):
                             )
 
         # test to write a dummy file to the directory to check is directory is writable
-        level, path = mkstemp(dir=self.config.local_storage_path)
-        try:
-            with os.fdopen(level, "w"):
-                pass
-            os.remove(path)
-        except IOError:
-            raise Exception(self.config.local_storage_path +
-                            " directory is not writeble, "
-                            "you need to set this for image processing downloads"
-                            )
+        # level, path = mkstemp(dir=self.config.local_storage_path)
+        # try:
+        #     with os.fdopen(level, "w"):
+        #         pass
+        #     os.remove(path)
+        # except IOError:
+        #     raise Exception(self.config.local_storage_path +
+        #                     " directory is not writeble, "
+        #                     "you need to set this for image processing downloads"
+        #                     )
 
     def extract(self, url=None, raw_html=None):
         """\
